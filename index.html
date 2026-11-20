@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LogicalTech — Servicios digitales para su negocio</title>
+<meta name="description" content="Catálogos web con pedidos por WhatsApp, finanzas, inventario y automatización para micronegocios de San Carlos y Alajuela. Listo en 2 a 3 días. Demo gratis.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LogicalTech">
+<meta property="og:title" content="LogicalTech — Catálogos web para su negocio">
+<meta property="og:description" content="Catálogos web con pedidos por WhatsApp para micronegocios de San Carlos y Alajuela. Listo en 2 a 3 días. Pida su demo gratis.">
+<meta property="og:url" content="https://logicaltechproyects-lang.github.io/logicaltech/">
+<meta property="og:image" content="https://logicaltechproyects-lang.github.io/logicaltech/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_CR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#3A2E25">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F1EBE0; --paper:#F8F4EC; --kraft:#D9CCB6; --line:#CDBFA8;
+  --walnut:#3A2E25; --bark:#6B5A4B; --ink:#241D17; --sand:#D9CCB6; --cream:#EFE6D6;
+  --ease:cubic-bezier(.23,1,.32,1); --spring:cubic-bezier(.34,1.56,.64,1); --drawer:cubic-bezier(.32,.72,0,1);
+  --display:'Fraunces',Georgia,serif; --serif:'Lora',Georgia,serif; --ui:Inter,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--walnut);font-family:var(--serif);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.38;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .2 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+.label{font-family:var(--ui);font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--bark)}
+.rule{display:flex;align-items:center;gap:14px;color:var(--line)}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:currentColor}
+.rule svg{flex:none}
+
+/* Header */
+header{position:sticky;top:0;z-index:20;background:rgba(241,235,224,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-size:23px;letter-spacing:-.01em}
+.brand b{font-weight:700}.brand span{color:var(--bark);font-weight:400}
+.navlinks{display:flex;gap:26px;font-family:var(--ui);font-size:14px;font-weight:500}
+.navlinks a{text-decoration:none;color:var(--bark)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:4px;border:1px solid transparent;font-family:var(--ui);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:transform .25s var(--ease),background .25s,color .25s,border-color .25s}
+.btn:active{transform:scale(.97)}
+.btn-dark{background:var(--walnut);color:var(--cream)}
+.btn-line{background:transparent;color:var(--walnut);border-color:var(--walnut)}
+.btn-sm{min-height:44px;padding:0 18px}
+@media (hover:hover) and (pointer:fine){.btn-dark:hover{background:var(--ink)}.btn-line:hover{background:var(--walnut);color:var(--cream)}.navlinks a:hover{color:var(--walnut)}}
+
+.nav-r{display:flex;align-items:center;gap:12px}
+.lang{display:flex;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--paper)}
+.lang button{min-width:44px;min-height:44px;border:0;background:none;font-family:var(--ui);font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--bark);transition:background .25s,color .25s}
+.lang button+button{border-left:1px solid var(--line)}
+.lang button[aria-pressed="true"]{background:var(--walnut);color:var(--cream)}
+@media (max-width:420px){.nav-r{gap:8px}.nav-r .btn{padding:0 12px}.brand{font-size:20px}}
+/* Hero */
+.hero{padding:64px 0 28px;text-align:center}
+.mark{width:96px;height:96px;margin:0 auto 22px;display:block}
+.mark .l{stroke-dasharray:110;stroke-dashoffset:110;animation:draw 1.2s .3s var(--ease) forwards}
+.mark .wire{stroke-dasharray:18;stroke-dashoffset:18;animation:draw .5s 1.3s var(--ease) forwards}
+.mark .node{opacity:0;transform-origin:84px 40px;animation:pop .6s 1.65s var(--spring) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:scale(1)}}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(44px,7.4vw,84px);line-height:1.02;letter-spacing:-.02em;margin:18px auto 22px;max-width:14ch}
+h1 em{font-style:italic;font-weight:400;color:var(--bark)}
+.lead{font-size:clamp(17px,2vw,20px);line-height:1.65;color:var(--bark);max-width:46ch;margin:0 auto 32px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.in{opacity:0;transform:translateY(12px);animation:in .8s var(--ease) forwards}
+@keyframes in{to{opacity:1;transform:none}}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:52px;border-block:1px solid var(--line)}
+.fact{padding:22px 16px;display:flex;flex-direction:column;gap:6px;align-items:center}
+.fact+.fact{border-left:1px solid var(--line)}
+.fact strong{font-family:var(--display);font-size:22px;font-weight:600}
+.fact span{font-size:15px;color:var(--bark)}
+
+/* Marquee */
+.marquee{overflow:hidden;padding:18px 0;border-bottom:1px solid var(--line)}
+.track{display:flex;gap:36px;width:max-content;animation:scroll 46s linear infinite;font-family:var(--display);font-style:italic;font-size:21px;color:var(--bark);white-space:nowrap}
+.track span::after{content:"✦";font-style:normal;font-size:12px;margin-left:36px;color:var(--kraft);vertical-align:middle}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* Sections */
+section{padding:80px 0}
+.sec-head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:36px}
+h2{font-family:var(--display);font-size:clamp(34px,5vw,50px);font-weight:600;letter-spacing:-.015em;line-height:1.05;margin:0}
+h2 em{font-style:italic;font-weight:400;color:var(--bark)}
+.sec-sub{color:var(--bark);font-size:17px;line-height:1.6;margin:0;max-width:52ch}
+
+/* Tabs */
+.tabs{position:relative;display:flex;justify-content:center;gap:4px;border-bottom:1px solid var(--line);margin:0 auto 32px;overflow-x:auto;scrollbar-width:none;max-width:100%}
+.tabs::-webkit-scrollbar{display:none}
+.tab{border:0;background:none;color:var(--bark);padding:0 14px;min-height:48px;font-family:var(--ui);font-size:14px;font-weight:500;white-space:nowrap;transition:color .3s}
+.tab[aria-pressed="true"]{color:var(--walnut)}
+.underline{position:absolute;bottom:-1px;left:0;height:2px;background:var(--walnut);transition:transform .45s var(--spring),width .45s var(--spring)}
+@media (max-width:640px){.tabs{justify-content:flex-start}}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
+.card{position:relative;display:flex;flex-direction:column;gap:14px;padding:32px 28px 28px;background:var(--paper);border:1px solid var(--line);border-radius:6px;outline:1px solid var(--line);outline-offset:-8px;animation:cardIn .6s var(--spring) both;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.card[hidden]{display:none}
+@keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+@media (hover:hover) and (pointer:fine){.card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(58,46,37,.16)}}
+.card.feat{background:var(--walnut);color:var(--cream);border-color:var(--walnut);outline-color:#5B4A3C}
+.card .num{font-family:var(--display);font-style:italic;color:var(--bark);font-size:17px}
+.card.feat .num{color:var(--sand)}
+.card h3{font-family:var(--display);font-weight:600;font-size:29px;margin:0;line-height:1.1}
+.card p{margin:0;color:var(--bark);line-height:1.6;font-size:16px}
+.card.feat p{color:#E2D6C3}
+.card ul{margin:4px 0 0;padding:14px 0 0;border-top:1px dashed var(--line);list-style:none;display:flex;flex-direction:column;gap:9px;font-size:15px}
+.card.feat ul{border-top-color:#6A5747}
+.card li{display:flex;gap:10px;align-items:flex-start;line-height:1.45}
+.card li svg{flex:none;margin-top:3px;color:var(--bark)}
+.card.feat li svg{color:var(--sand)}
+.seal{position:absolute;top:18px;right:18px;width:76px;height:76px;border-radius:50%;border:1.5px solid var(--sand);display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--ui);font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);transform:rotate(-12deg);line-height:1.5}
+.seal::before{content:"";position:absolute;inset:4px;border-radius:50%;border:1px dashed #8C7764}
+.card-foot{margin-top:auto;padding-top:10px}
+.add{width:100%;justify-content:space-between}
+.card .add{background:transparent;color:var(--walnut);border:1px solid var(--walnut)}
+.card.feat .add{background:var(--cream);color:var(--walnut);border-color:var(--cream)}
+.card .add.on{background:var(--walnut);color:var(--cream)}
+.card.feat .add.on{background:transparent;color:var(--cream);border-color:var(--sand)}
+.add .ic{display:inline-flex;transition:transform .35s var(--spring)}
+.add.on .ic{transform:rotate(45deg)}
+
+/* For whom */
+.who{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+.who div{padding:26px 16px;text-align:center;display:flex;flex-direction:column;gap:10px;align-items:center;font-family:var(--display);font-size:19px}
+.who div+div{border-left:1px solid var(--line)}
+.who svg{color:var(--bark)}
+
+/* Portfolio (dark band) */
+.band{background:var(--ink);color:var(--cream)}
+.band .label{color:var(--sand)}
+.band h2 em,.band .sec-sub{color:var(--sand)}
+.case{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.case h3{font-family:var(--display);font-weight:600;font-size:clamp(32px,4vw,44px);margin:12px 0 12px}
+.case p{color:#D8CCB9;line-height:1.7;margin:0 0 20px;font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--ui);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:8px 12px;border:1px solid #57483B;border-radius:3px;color:var(--sand)}
+.phone{justify-self:center;width:220px;height:400px;border-radius:34px;background:var(--paper);border:8px solid #4A3C30;padding:18px 14px;display:flex;flex-direction:column;gap:10px;color:var(--walnut);transform:rotate(-4deg);box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.phone .ph-title{font-family:var(--display);font-weight:600;font-size:17px;text-align:center}
+.phone .ph-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;flex:1}
+.phone .ph-item{border-radius:8px;background:var(--kraft);display:flex;flex-direction:column;justify-content:flex-end;padding:8px;gap:4px}
+.phone .ph-item i{display:block;height:6px;border-radius:3px;background:#B9A88E;width:80%}
+.phone .ph-item i+i{width:50%}
+.phone .ph-btn{height:34px;border-radius:4px;background:var(--walnut);color:var(--cream);font-family:var(--ui);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;display:flex;align-items:center;justify-content:center}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{padding:28px 4px;border-top:2px solid var(--walnut)}
+.step b{display:block;font-family:var(--display);font-style:italic;font-weight:400;font-size:46px;color:var(--bark);line-height:1;margin-bottom:12px}
+.step h3{font-family:var(--display);font-weight:600;font-size:24px;margin:0 0 8px}
+.step p{margin:0;color:var(--bark);line-height:1.6}
+
+/* About */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.about h2{text-align:left}
+.about p{font-size:18px;line-height:1.75;color:var(--walnut);margin:0 0 16px}
+.about p:first-child::first-letter{font-family:var(--display);font-weight:600;float:left;font-size:64px;line-height:.9;padding:6px 10px 0 0;color:var(--walnut)}
+.sign{font-family:var(--display);font-style:italic;font-size:22px;color:var(--bark)}
+
+/* FAQ */
+.faq{max-width:760px;margin:0 auto;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 2px;font-family:var(--display);font-size:21px;font-weight:600;min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{flex:none;transition:transform .35s var(--spring);color:var(--bark)}
+.faq details[open] summary svg{transform:rotate(45deg)}
+.faq details p{margin:0;padding:0 2px 22px;color:var(--bark);line-height:1.7;font-size:17px;max-width:62ch}
+
+/* Contact */
+.contact{background:var(--walnut);color:var(--cream);border-radius:6px;outline:1px solid #6A5747;outline-offset:-10px;padding:clamp(32px,5vw,60px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
+.contact .label{color:var(--sand)}
+.contact h2{max-width:18ch}
+.contact .num-big{font-family:var(--display);font-size:clamp(36px,5vw,52px);font-weight:600}
+.contact .btn-cream{background:var(--cream);color:var(--walnut)}
+.contact .btn-ghost{border-color:var(--sand);color:var(--cream)}
+.cinfo{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#5B4A3C;border:1px solid #5B4A3C;width:100%;max-width:960px;margin:10px 0 8px}
+.ci{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;padding:24px 14px;text-decoration:none;color:var(--cream);background:var(--walnut);transition:background .25s}
+.ci-sm{font-size:16px!important;word-break:break-all}
+.ci svg{color:var(--sand);margin-bottom:4px}
+.ci-k{font-family:var(--ui);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--sand)}
+.ci-v{font-family:var(--display);font-size:20px;font-weight:600}
+@media (hover:hover) and (pointer:fine){a.ci:hover{background:#43362B}}
+@media (max-width:760px){.cinfo{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.cinfo{grid-template-columns:1fr}}
+
+/* Status */
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:14px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper);font-family:var(--ui);font-size:13px;font-weight:500;color:var(--walnut)}
+.status .dot{width:8px;height:8px;border-radius:50%;background:#9C8F80;position:relative}
+.status.open .dot{background:#4E7A4A}
+.status.open .dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:#4E7A4A;animation:ping 1.8s ease-out infinite}
+@keyframes ping{from{transform:scale(1);opacity:.6}to{transform:scale(2.8);opacity:0}}
+
+/* Card details */
+.card{cursor:pointer}
+.card .more{background:none;border:0;padding:0;min-height:44px;font-family:var(--ui);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bark);text-decoration:underline;text-underline-offset:4px;align-self:flex-start}
+.card.feat .more{color:var(--sand)}
+.detail .d-cat{margin-bottom:4px}
+.detail h2{font-size:clamp(30px,6vw,40px)}
+.detail .d-body{font-size:17px;line-height:1.7;color:var(--walnut);margin:10px 0 18px}
+.detail ul{list-style:none;padding:16px 0 0;margin:0 0 18px;border-top:1px dashed var(--line);display:flex;flex-direction:column;gap:10px}
+.detail li{display:flex;gap:10px;align-items:flex-start;line-height:1.45}
+.detail li svg{flex:none;margin-top:3px;color:var(--bark)}
+.d-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.d-meta span{font-family:var(--ui);font-size:12px;font-weight:500;padding:8px 12px;border:1px solid var(--line);border-radius:3px;background:var(--bg)}
+.d-actions{display:flex;flex-direction:column;gap:10px}
+.d-actions .btn{width:100%}
+.close{position:absolute;top:14px;right:14px;width:44px;height:44px;border:0;background:none;color:var(--bark);border-radius:4px;display:flex;align-items:center;justify-content:center}
+
+/* Payment */
+.pay{border:0;padding:0;margin:0 0 14px}
+.pay legend{font-family:var(--ui);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bark);margin-bottom:8px;padding:0}
+.pay-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pay-opts label{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 14px;border:1px solid var(--line);border-radius:4px;background:#FFFDF8;font-size:16px;cursor:pointer}
+.pay-opts label:has(input:checked){border-color:var(--walnut);box-shadow:inset 0 0 0 1px var(--walnut)}
+.pay-opts input{accent-color:#3A2E25;width:18px;height:18px}
+.sinpe{margin-top:10px;padding:14px;border:1px dashed var(--bark);border-radius:4px;background:var(--bg);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.sinpe[hidden]{display:none}
+.sinpe small{display:block;font-family:var(--ui);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bark)}
+.sinpe strong{font-family:var(--display);font-size:24px}
+.sinpe p{margin:4px 0 0;font-size:14px;color:var(--bark);flex-basis:100%}
+.copy{min-height:44px;padding:0 14px;border:1px solid var(--walnut);border-radius:4px;background:transparent;color:var(--walnut);font-family:var(--ui);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+
+/* Packages */
+.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.pack{position:relative;display:flex;flex-direction:column;gap:16px;padding:36px 28px 28px;background:var(--paper);border:1px solid var(--line);border-radius:6px;outline:1px solid var(--line);outline-offset:-8px}
+.pack.rec{background:var(--walnut);color:var(--cream);border-color:var(--walnut);outline-color:#5B4A3C;transform:translateY(-10px)}
+.ribbon{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--kraft);color:var(--walnut);font-family:var(--ui);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 14px;border-radius:3px;white-space:nowrap}
+.pack .tier{font-family:var(--ui);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--bark)}
+.pack.rec .tier{color:var(--sand)}
+.pack h3{font-family:var(--display);font-weight:600;font-size:32px;margin:0;line-height:1.05}
+.pack .for{margin:0;color:var(--bark);font-style:italic;line-height:1.5}
+.pack.rec .for{color:#E2D6C3}
+.pack .price{font-family:var(--display);font-size:20px;padding:14px 0;border-block:1px dashed var(--line)}
+.pack.rec .price{border-color:#6A5747}
+.pack ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:15.5px}
+.pack li{display:flex;gap:10px;align-items:flex-start;line-height:1.45}
+.pack li svg{flex:none;margin-top:3px;color:var(--bark)}
+.pack.rec li svg{color:var(--sand)}
+.pack .btn{margin-top:auto;width:100%}
+.pack.rec .btn{background:var(--cream);color:var(--walnut)}
+@media (max-width:900px){.packs{grid-template-columns:1fr}.pack.rec{transform:none;margin-top:10px}}
+
+footer{padding:36px 0 120px;color:var(--bark);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--ui)}
+
+/* Quote bar + drawer */
+.qbar{position:fixed;left:50%;bottom:16px;z-index:30;width:min(560px,calc(100% - 24px));transform:translate(-50%,140%);transition:transform .55s var(--spring);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 18px;border-radius:6px;background:var(--walnut);color:var(--cream);box-shadow:0 20px 50px rgba(36,29,23,.4)}
+.qbar.show{transform:translate(-50%,0)}
+.qbar .bag{display:flex;align-items:center;gap:10px;background:none;border:0;color:inherit;min-height:44px;padding:0;font-size:15px}
+.count{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;border-radius:13px;background:var(--cream);color:var(--walnut);font-family:var(--ui);font-weight:600;font-size:13px;padding:0 6px}
+.bump{animation:bump .45s var(--spring)}
+@keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.35)}100%{transform:scale(1)}}
+.shake{animation:shake .5s var(--ease)}
+@keyframes shake{20%{transform:rotate(-12deg)}45%{transform:rotate(10deg)}70%{transform:rotate(-5deg)}100%{transform:none}}
+.scrim{position:fixed;inset:0;background:rgba(36,29,23,.5);z-index:40;opacity:0;pointer-events:none;transition:opacity .35s}
+.scrim.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;left:0;right:0;bottom:0;z-index:50;max-height:86vh;overflow:auto;background:var(--paper);color:var(--walnut);border-radius:10px 10px 0 0;padding:12px 24px 28px;transform:translateY(100%);transition:transform .5s var(--drawer);max-width:620px;margin:0 auto;border:1px solid var(--line)}
+.drawer.show{transform:none}
+.grab{width:44px;height:4px;border-radius:2px;background:var(--line);margin:0 auto 18px}
+.drawer h2{font-size:34px;margin-bottom:6px}
+.drawer .hint{color:var(--bark);margin:0 0 18px;line-height:1.5}
+.qlist{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:8px}
+.qlist li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 14px;border:1px solid var(--line);border-radius:4px;font-family:var(--display);font-size:18px;font-weight:600;background:var(--bg)}
+.qlist button{border:0;background:none;color:var(--bark);min-width:44px;min-height:44px;border-radius:4px;display:inline-flex;align-items:center;justify-content:center}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.field label{font-family:var(--ui);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bark)}
+.field input,.field textarea{font:inherit;font-size:16px;padding:12px 14px;border-radius:4px;border:1px solid var(--line);background:#FFFDF8;color:var(--walnut)}
+.field textarea{min-height:84px;resize:vertical}
+.drawer .btn-dark{width:100%}
+.drawer .alt{display:block;text-align:center;margin-top:12px;color:var(--bark);font-size:15px}
+.flyer{position:fixed;z-index:60;width:16px;height:16px;border-radius:50%;background:var(--walnut);box-shadow:0 0 0 4px rgba(58,46,37,.18);pointer-events:none}
+
+@media (max-width:860px){
+  .navlinks{display:none}
+  .case,.about{grid-template-columns:1fr}
+  .phone{transform:rotate(-3deg) scale(.9)}
+  .steps{grid-template-columns:1fr;gap:0}
+  .who{grid-template-columns:repeat(2,1fr)}
+  .who div+div{border-left:0}
+  .who div{border-bottom:1px solid var(--line)}
+  .who div:nth-child(even){border-left:1px solid var(--line)}
+  .who div:last-child{grid-column:1/-1;border-bottom:0;border-left:0}
+  section{padding:60px 0}
+}
+@media (max-width:560px){
+  .facts{grid-template-columns:1fr}
+  .fact+.fact{border-left:0;border-top:1px solid var(--line)}
+  .cards{grid-template-columns:1fr}
+  .card{padding:30px 22px 24px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.15s!important}
+  .mark .l,.mark .wire{stroke-dashoffset:0}.mark .node{opacity:1}
+  .track{animation:none}
+}
+/* ===== Orden v2 ===== */
+.marquee{display:none}
+.hero .who{margin:44px auto 0;padding:24px 0 0;border:0;border-top:1px solid var(--line);background:none;display:flex;flex-direction:column;gap:12px;align-items:center;max-width:760px}
+.hero .who ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0;padding:0}
+.hero .who li{font-family:var(--display);font-size:17px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+.alt-bg{background:#EAE2D4;border-block:1px solid var(--line)}
+.tabs-bar{position:sticky;top:68px;z-index:10;background:var(--bg);margin:0 -22px 28px;padding:6px 22px 0}
+.tabs-bar .tabs{margin:0 auto}
+.card{gap:12px;padding:28px 26px 24px}
+.card h3{font-size:26px;padding-right:70px}
+.card:not(.feat) h3{padding-right:0}
+.card-foot{display:flex;flex-direction:column;gap:2px;padding-top:6px}
+/* Comparison table */
+.cmp-wrap{max-width:900px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.cmp{width:100%;border-collapse:collapse;table-layout:fixed}
+.cmp th,.cmp td{padding:14px 12px;border-bottom:1px solid #E4DACB;text-align:center;vertical-align:middle}
+.cmp tbody th{text-align:left;font-weight:400;font-size:15.5px;line-height:1.4;width:42%}
+.cmp thead th{vertical-align:bottom;padding-top:22px;border-bottom:2px solid var(--walnut)}
+.cmp .tier{display:block;font-family:var(--ui);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--bark);margin-bottom:4px}
+.cmp .pn{display:block;font-family:var(--display);font-size:20px;font-weight:600;line-height:1.1}
+.cmp .rec{background:#F1E9DB}
+.cmp thead .rec{position:relative}
+.cmp .badge{display:inline-block;margin-bottom:8px;font-family:var(--ui);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:var(--walnut);color:var(--cream);padding:4px 8px;border-radius:3px}
+.cmp .yes{color:var(--walnut)}
+.cmp .no{color:#B9A88E}
+.cmp tr.ideal td{font-style:italic;font-size:14px;color:var(--bark);line-height:1.4}
+.cmp tr.ideal th,.cmp tr.act th{font-family:var(--ui);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bark)}
+.cmp tr.act td,.cmp tr.act th{border-bottom:0;padding-bottom:20px}
+.cmp tr.act .btn{width:100%;padding:0 8px;font-size:11.5px;letter-spacing:.1em}
+@media (max-width:560px){.cmp th,.cmp td{padding:12px 6px}.cmp tbody th{font-size:14px;width:40%;padding-left:12px}.cmp .pn{font-size:16px}.cmp tr.ideal td{font-size:12.5px}}
+/* Terms */
+.terms{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:40px}
+.term{background:var(--paper);padding:22px 18px;display:flex;flex-direction:column;gap:6px}
+.term svg{color:var(--bark);margin-bottom:4px}
+.term strong{font-family:var(--display);font-size:19px;font-weight:600;line-height:1.2}
+.term span{font-size:14.5px;color:var(--bark);line-height:1.45}
+@media (max-width:860px){.terms{grid-template-columns:1fr 1fr}}
+/* Contact v2 */
+.c-sub{margin:0;color:#D8CCB9;font-size:17px;line-height:1.6;max-width:46ch}
+.cbtns{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%;max-width:900px;margin-top:10px}
+.cbtn{display:flex;align-items:center;gap:14px;text-align:left;padding:18px 18px;min-height:72px;border:1px solid #6A5747;border-radius:6px;background:#43362B;color:var(--cream);text-decoration:none;transition:background .25s,transform .25s var(--ease)}
+.cbtn svg{flex:none;color:var(--sand)}
+.cbtn span{display:flex;flex-direction:column;gap:2px;min-width:0}
+.cbtn small{font-family:var(--ui);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sand)}
+.cbtn b{font-family:var(--display);font-size:20px;font-weight:600}
+.cbtn b.mail{font-size:15px;overflow-wrap:anywhere}
+.cbtn:active{transform:scale(.98)}
+@media (hover:hover) and (pointer:fine){.cbtn:hover{background:#4D3F33}}
+.c-line{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 24px;margin:6px 0 0;font-size:15.5px;color:#D8CCB9}
+.c-line b{font-family:var(--ui);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sand);font-weight:600}
+@media (max-width:760px){.cbtns{grid-template-columns:1fr}}
+/* Back to top */
+.totop{position:fixed;right:16px;bottom:16px;z-index:25;width:48px;height:48px;border-radius:50%;background:var(--paper);color:var(--walnut);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(36,29,23,.15);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .3s,transform .4s var(--spring),bottom .4s var(--spring)}
+.totop.show{opacity:1;transform:none;pointer-events:auto}
+body.has-q .totop{bottom:88px}
+
+/* ===== v3: búho, demo, toast, WhatsApp flotante ===== */
+.owl-hero{display:flex;flex-direction:column;align-items:center;gap:6px;margin:0 auto 18px}
+.owl{width:112px;height:126px;display:block}
+.owl-bob{animation:bob 3.2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.owl .lid{opacity:0;animation:blink 4.2s steps(1) infinite}
+@keyframes blink{0%,96%{opacity:0}97%,100%{opacity:1}}
+.owl-bubble{position:relative;background:var(--walnut);color:var(--cream);font-family:var(--ui);font-weight:600;font-size:14px;padding:10px 14px;border-radius:12px;max-width:280px}
+.owl-bubble:after{content:"";position:absolute;left:50%;bottom:-8px;margin-left:-8px;border:8px solid transparent;border-bottom:0;border-top-color:var(--walnut)}
+.demo{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;background:var(--walnut);color:var(--cream);border-radius:6px;outline:1px solid #6A5747;outline-offset:-10px;padding:clamp(28px,5vw,56px)}
+.demo .label{color:var(--sand)}.demo h2{margin:12px 0 14px}.demo h2 em{color:var(--sand)}.demo .sec-sub{color:#D8CCB9}
+.demo-steps{margin:18px 0 0;padding-left:22px;display:flex;flex-direction:column;gap:8px;color:#EFE6D6;font-size:17px;line-height:1.5}
+.demo-form{background:var(--paper);color:var(--walnut);border-radius:6px;padding:26px;display:flex;flex-direction:column;gap:4px}
+.demo-form select{font:inherit;font-size:16px;padding:12px 14px;border-radius:4px;border:1px solid var(--line);background:#FFFDF8;color:var(--walnut);min-height:48px}
+.demo-form .btn{width:100%;margin-top:8px}
+.demo-note{text-align:center;font-size:14px;color:var(--bark);margin-top:8px}
+@media (max-width:860px){.demo{grid-template-columns:1fr}}
+.toast{position:fixed;left:50%;top:18px;z-index:70;display:flex;align-items:center;gap:14px;background:var(--paper);color:var(--walnut);border:1px solid var(--line);border-radius:10px;padding:12px 18px 12px 12px;box-shadow:0 18px 40px rgba(36,29,23,.25);transform:translate(-50%,-160%);transition:transform .55s var(--spring);max-width:calc(100% - 24px)}
+.toast.show{transform:translate(-50%,0)}
+.toast .owl{width:56px;height:63px;flex:none}
+.toast b{display:block;font-family:var(--display);font-size:20px}
+.toast span{font-size:15px;color:var(--bark)}
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:24;width:58px;height:58px;border-radius:50%;background:#2F7A3A;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(36,29,23,.3);transition:bottom .4s var(--spring),transform .25s var(--ease)}
+.wa-float:active{transform:scale(.94)}
+body.has-q .wa-float{bottom:88px}
+.totop{right:84px}
+.demo>*{min-width:0}.demo-form select,.demo-form input{width:100%;max-width:100%}
+.demo h2{overflow-wrap:anywhere}
+@media (max-width:480px){.nav-r .btn{display:none}.lang button{min-width:40px}}
+@media (prefers-reduced-motion:reduce){.owl-bob,.owl .lid{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio" aria-label="LogicalTech, inicio">
+      <svg width="34" height="34" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="20" fill="#3A2E25"/><path d="M36 28V84H76" fill="none" stroke="#EFE6D6" stroke-width="13" stroke-linecap="square"/><path d="M60 40H76" fill="none" stroke="#EFE6D6" stroke-width="5" stroke-linecap="round"/><circle cx="84" cy="40" r="9" fill="none" stroke="#EFE6D6" stroke-width="5"/></svg>
+      <span><b>Logical</b><span>Tech</span></span>
+    </a>
+    <nav class="navlinks" aria-label="Secciones">
+      <a href="#servicios">Servicios</a><a href="#paquetes">Paquetes</a><a href="#portafolio">Portafolio</a><a href="#nosotros">Nosotros</a><a href="#preguntas">Preguntas</a>
+    </nav>
+    <div class="nav-r">
+      <div class="lang" id="langSwitch" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es" aria-pressed="true">ES</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+      <a class="btn btn-dark btn-sm" id="navWa" href="#" target="_blank" rel="noopener">Cotizar</a>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="wrap">
+      <div class="owl-hero in">
+        <div class="owl-bubble" id="owlHi">¡Hola! Soy Lógico, el búho de LogicalTech.</div>
+        <svg class="owl owl-bob" id="owlHero" viewBox="0 0 16 18" shape-rendering="crispEdges" role="img" aria-label="Lógico, la mascota búho de LogicalTech"></svg>
+      </div>
+      <div class="label in" style="animation-delay:.08s">San Carlos y Alajuela · Costa Rica</div>
+      <div class="status in" id="status" style="animation-delay:.12s"><span class="dot"></span><span id="statusTxt">Todos los días, 6:00 a.m. – 8:00 p.m.</span></div>
+      <h1 class="in" style="animation-delay:.2s">Tecnología al servicio de <em>su negocio.</em></h1>
+      <p class="lead in" style="animation-delay:.32s">Catálogos web, control de finanzas e inventario y automatización para micronegocios. Soluciones sencillas, hechas a la medida de cada cliente.</p>
+      <div class="cta-row in" style="animation-delay:.44s">
+        <a class="btn btn-dark" href="#demo">Pida su demo gratis</a>
+        <a class="btn btn-line" href="#servicios">Ver servicios</a>
+      </div>
+      <div class="who in" style="animation-delay:.56s">
+        <span class="label">Trabajamos con</span>
+        <ul>
+          <li>Floristerías</li><li>Sodas y restaurantes</li><li>Talleres</li><li>Tiendas de belleza</li><li>Pulperías y ventanitas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Nuestros servicios</span>
+        <h2>Lo que hacemos <em>por usted</em></h2>
+        <p class="sec-sub">Toque un servicio para ver todo lo que incluye, y agregue a su cotización los que le interesen.</p>
+      </div>
+      <div class="tabs-bar"><div class="tabs" role="group" aria-label="Filtrar servicios" id="tabs"><span class="underline" id="underline" aria-hidden="true"></span></div></div>
+      <div class="cards" id="cards"></div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <div class="wrap">
+      <div class="demo">
+        <div class="demo-txt">
+          <span class="label">Demo gratis</span>
+          <h2>Vea su catálogo <em>antes de pagar</em></h2>
+          <p class="sec-sub" style="text-align:left">Le armamos una muestra con el nombre de su negocio, sin compromiso. Si le gusta, la dejamos lista en 2 a 3 días.</p>
+          <ol class="demo-steps">
+            <li>Díganos el nombre y el tipo de su negocio.</li>
+            <li>Le enviamos su demo por WhatsApp.</li>
+            <li>Usted decide si la quiere.</li>
+          </ol>
+        </div>
+        <form class="demo-form" id="demoForm">
+          <div class="field"><label for="dBizName">Nombre de su negocio</label><input id="dBizName" placeholder="Ej. Soda La Esquina"></div>
+          <div class="field"><label for="dBizType">Tipo de negocio</label>
+            <select id="dBizType">
+              <option value="Comida (soda, restaurante)">Comida (soda, restaurante)</option>
+              <option value="Tienda (ropa, belleza, otros)">Tienda (ropa, belleza, otros)</option>
+              <option value="Servicios con cita (salón, barbería, consultorio)">Servicios con cita (salón, barbería, consultorio)</option>
+              <option value="Floristería">Floristería</option>
+              <option value="Taller">Taller</option>
+              <option value="Turismo">Turismo</option>
+              <option value="Otro">Otro</option>
+            </select></div>
+          <a class="btn btn-dark" id="demoWa" href="#" target="_blank" rel="noopener">Pedir mi demo por WhatsApp</a>
+          <span class="demo-note">Sin costo y sin compromiso.</span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="paquetes" class="alt-bg">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Paquetes</span>
+        <h2>Compare y <em>elija</em></h2>
+        <p class="sec-sub">Combinaciones pensadas para cada etapa de su negocio. Precio a cotizar.</p>
+      </div>
+      <div class="cmp-wrap"><table class="cmp" id="cmp"></table></div>
+    </div>
+  </section>
+
+  <section id="portafolio" class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Portafolio</span>
+        <h2>Trabajos <em>realizados</em></h2>
+      </div>
+      <article class="case">
+        <div>
+          <span class="label">Primer cliente</span>
+          <h3>Eva Floristería</h3>
+          <p>Catálogo web con enlace para compartir por WhatsApp y en la biografía de Instagram. Los productos y precios se actualizan desde Google Sheets, y en la misma hoja se llevan las finanzas del negocio: entradas, salidas, pérdidas y gráficos, junto con un calendario de las fechas de mayor venta.</p>
+          <div class="chips"><span class="chip">Catálogo web</span><span class="chip">Pedidos por WhatsApp</span><span class="chip">Google Sheets</span><span class="chip">Finanzas</span></div>
+        </div>
+        <div class="phone" aria-hidden="true">
+          <div class="ph-title">Eva Floristería</div>
+          <div class="ph-grid"><div class="ph-item"><i></i><i></i></div><div class="ph-item"><i></i><i></i></div><div class="ph-item"><i></i><i></i></div><div class="ph-item"><i></i><i></i></div></div>
+          <div class="ph-btn">Pedir por WhatsApp</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="proceso">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Cómo trabajamos</span>
+        <h2>Un proceso <em>claro</em></h2>
+      </div>
+      <div class="steps">
+        <div class="step"><b>i.</b><h3>Conversamos</h3><p>Usted nos cuenta sobre su negocio y lo que desea mejorar.</p></div>
+        <div class="step"><b>ii.</b><h3>Le presentamos una propuesta</h3><p>Le mostramos cómo se vería y la ajustamos a su gusto.</p></div>
+        <div class="step"><b>iii.</b><h3>Lo dejamos funcionando</h3><p>Lo publicamos y le enseñamos a usarlo y actualizarlo.</p></div>
+      </div>
+      <div class="terms">
+        <div class="term"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><strong>Entrega en 2 a 3 días</strong><span>Desde que recibimos la información de su negocio</span></div>
+        <div class="term"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h4"/></svg><strong>SINPE Móvil o efectivo</strong><span>Formas de pago</span></div>
+        <div class="term"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M7 10v5c3 2 7 2 10 0v-5"/></svg><strong>Capacitación incluida</strong><span>Le enseñamos a usarlo y actualizarlo</span></div>
+        <div class="term"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1L19 8l-3-3L5 16z"/><path d="M14 7l3 3"/></svg><strong>A la medida</strong><span>Cada solución se adapta a su negocio</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preguntas" class="alt-bg">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Preguntas frecuentes</span>
+        <h2>Resolvemos <em>sus dudas</em></h2>
+      </div>
+      <div class="faq">
+        <details><summary>¿Necesito saber de tecnología?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>No. Le entregamos todo listo para usar y le enseñamos paso a paso cómo manejarlo y actualizarlo.</p></details>
+        <details><summary>¿Puedo cambiar mis productos y precios yo mismo?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. Los catálogos y menús se actualizan desde una hoja de Google Sheets: usted cambia un precio y se refleja en su catálogo.</p></details>
+        <details><summary>¿Cómo me llegan los pedidos?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Directamente a su WhatsApp, con el detalle de lo que el cliente eligió.</p></details>
+        <details><summary>¿Cuánto tarda en estar listo?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Entre 2 y 3 días a partir de que nos envía la información de su negocio (productos, precios y fotografías).</p></details>
+        <details><summary>¿Cómo solicito una cotización?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Seleccione los servicios de su interés en esta página y envíe la solicitud por WhatsApp, o escríbanos al 6326-6186. Le respondemos con una propuesta y su precio.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <div class="wrap">
+      <div class="about">
+        <div>
+          <span class="label">Sobre nosotros</span>
+          <h2 style="margin-top:14px">Un emprendimiento <em>de aquí</em></h2>
+        </div>
+        <div>
+          <p>LogicalTech es un emprendimiento de tecnología en Ciudad Quesada dedicado a los micronegocios. Creemos que la tecnología no tiene por qué ser complicada ni costosa para ser útil.</p>
+          <p>Por eso creamos herramientas sencillas que ayudan a vender más, ordenar las finanzas y ahorrar tiempo, y acompañamos a cada cliente hasta que pueda usarlas por su cuenta.</p>
+          <span class="sign">— Elian, fundador de LogicalTech</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" style="padding-top:0">
+    <div class="wrap">
+      <div class="contact">
+        <span class="label">Contacto</span>
+        <h2>¿Listo para dar el siguiente paso con su negocio?</h2>
+        <p class="c-sub">Escríbanos y con gusto le asesoramos sobre la mejor solución para su negocio.</p>
+        <div class="cbtns">
+          <a class="cbtn" id="ciWa" href="#" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+            <span><small>WhatsApp</small><b>6326-6186</b></span>
+          </a>
+          <a class="cbtn" id="igLink" href="#" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+            <span><small>Instagram</small><b id="igText">@logicaltech_</b></span>
+          </a>
+          <a class="cbtn" id="ciMail" href="mailto:logicaltechproyects@gmail.com">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <span><small>Correo</small><b class="mail">logicaltechproyects@gmail.com</b></span>
+          </a>
+        </div>
+        <p class="c-line"><span><b>Horario:</b> todos los días, 6:00 a.m. – 8:00 p.m.</span><span><b>Cobertura:</b> toda la zona de San Carlos y Alajuela</span></p>
+      </div>
+      <footer><span>© LogicalTech · Ciudad Quesada, Costa Rica</span><span>Tecnología al servicio de su negocio</span></footer>
+    </div>
+  </section>
+</main>
+
+<a class="totop" id="totop" href="#inicio" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+
+<div class="qbar" id="qbar" aria-live="polite">
+  <button class="bag" id="openQ" type="button" aria-label="Ver cotización">
+    <svg id="bagIc" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6l1 3H8z"/><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M8 12h8M8 16h5"/></svg>
+    <span class="count" id="count">0</span>
+    <span id="qlabel">servicios seleccionados</span>
+  </button>
+  <button class="btn btn-sm" type="button" id="openQ2" style="background:var(--cream);color:var(--walnut)">Enviar</button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg class="owl" id="owlToast" viewBox="0 0 16 18" shape-rendering="crispEdges" aria-hidden="true"></svg>
+  <div><b id="toastT">¡Gracias!</b><span id="toastS">Le respondemos pronto por WhatsApp.</span></div>
+</div>
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escríbanos por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></a>
+<div class="scrim" id="scrim"></div>
+<div class="drawer detail" id="detail" role="dialog" aria-modal="true" aria-labelledby="dName">
+  <div class="grab" aria-hidden="true"></div>
+  <button class="close" type="button" id="dClose" aria-label="Cerrar detalles"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="label d-cat" id="dCat"></div>
+  <h2 id="dName"></h2>
+  <p class="d-body" id="dBody"></p>
+  <ul id="dInc"></ul>
+  <div class="d-meta"><span>Entrega en 2 a 3 días</span><span>Precio a cotizar</span><span>Pago por SINPE Móvil o efectivo</span></div>
+  <div class="d-actions">
+    <button class="btn btn-dark" type="button" id="dAdd">Agregar a cotización</button>
+    <a class="btn btn-line" id="dAsk" href="#" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+  </div>
+</div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+  <div class="grab" aria-hidden="true"></div>
+  <h2 id="dTitle">Solicitud de cotización</h2>
+  <p class="hint">Le responderemos por WhatsApp con una propuesta y su precio.</p>
+  <ul class="qlist" id="qlist"></ul>
+  <form id="qform">
+    <div class="field"><label for="fName">Su nombre</label><input id="fName" autocomplete="name" placeholder="Ej. María Rodríguez"></div>
+    <div class="field"><label for="fBiz">Nombre y tipo de negocio</label><input id="fBiz" placeholder="Ej. Soda La Esquina"></div>
+    <div class="field"><label for="fNote">Comentarios (opcional)</label><textarea id="fNote"></textarea></div>
+    <fieldset class="pay">
+      <legend>Forma de pago</legend>
+      <div class="pay-opts">
+        <label><input type="radio" name="pay" value="SINPE Móvil" checked> SINPE Móvil</label>
+        <label><input type="radio" name="pay" value="Efectivo"> Efectivo</label>
+      </div>
+      <div class="sinpe" id="sinpeBox">
+        <div><small>SINPE Móvil</small><strong id="sinpeNum">6326-6186</strong></div>
+        <button class="copy" type="button" id="copySinpe">Copiar número</button>
+        <p>Envíe el comprobante por WhatsApp una vez acordada la cotización.</p>
+      </div>
+    </fieldset>
+    <a class="btn btn-dark" id="sendWa" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+    <span class="alt">O escríbanos directamente al 6326-6186</span>
+  </form>
+</div>
+
+<script>
+/* ===================== CONFIGURACIÓN ===================== */
+const WA = "50663266186";
+const IG_USER = "logicaltech_";
+const SINPE = "6326-6186";
+const HOURS = {open: 6, close: 20, tz: "America/Costa_Rica"}; // todos los días, 6 a.m. – 8 p.m.
+/* Enlace CSV de la hoja publicada (Archivo › Compartir › Publicar en la web › CSV).
+   Vacío = usa los datos de abajo. */
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/10JHrZg1ZAtpSAbahsXEafU6Dq4Rq3LuECwjpKrSjs40/gviz/tq?tqx=out:csv";
+const FALLBACK_CSV = "tipo,id,categoria,nombre,descripcion,detalle,incluye,destacado,disponible\nservicio,catalogo,Ventas en línea,Catálogo web,Sus productos en un enlace para compartir por WhatsApp y en la biografía de Instagram. Sus clientes eligen y le hacen el pedido directamente.,\"Una página web con todos sus productos, fotografías y precios, lista para compartir con un solo enlace. Sus clientes eligen, arman su pedido y le envían el detalle completo a su WhatsApp. Usted actualiza productos y precios desde una hoja de Google Sheets, sin tocar código.\",Enlace propio para compartir | Pedidos directos a su WhatsApp | Productos y precios editables desde Google Sheets | Opción de pago por SINPE Móvil | Capacitación para actualizarlo,sí,sí\nservicio,menu,Ventas en línea,Menú digital,\"Para restaurantes y sodas: su menú siempre actualizado, con fotografías y pedidos por WhatsApp.\",\"Ideal para sodas, restaurantes y comidas rápidas. Sus platillos organizados por categoría, con fotografías y precios siempre al día. Sus clientes arman el pedido desde el celular y se lo envían por WhatsApp.\",\"Platillos organizados por categoría, con fotos | Pedidos por WhatsApp | Cambios de precio en segundos desde Google Sheets\",no,sí\nservicio,finanzas,Control del negocio,Finanzas del negocio,\"Una hoja para registrar entradas, salidas y pérdidas, con gráficos que muestran el estado de su negocio.\",\"Una hoja de Google Sheets hecha para su negocio, donde registra entradas, salidas y pérdidas. Los gráficos se actualizan solos para que vea de un vistazo cómo va el mes, y un calendario le recuerda las fechas de mayor venta.\",Registro de ventas y gastos | Gráficos automáticos | Calendario de fechas de mayor venta | Capacitación incluida,no,sí\nservicio,stock,Control del negocio,Control de inventario,\"Conozca qué tiene, qué se vende más y qué debe reponer antes de que se agote.\",\"Lleve el control de cada producto: cuánto tiene, cuánto vende y cuándo reponer. La hoja le avisa cuando un producto está por agotarse.\",Inventario por producto | Aviso de existencias bajas | Productos más vendidos,no,sí\nservicio,auto,Automatización,Automatización,\"Menos tareas repetitivas: pedidos, reportes y mensajes que se generan solos.\",\"Conectamos sus herramientas para que las tareas repetitivas se hagan solas: pedidos que llegan ordenados, reportes que se generan automáticamente y mensajes listos para enviar.\",Pedidos que llegan ordenados | Reportes automáticos | Mensajes listos para enviar,no,sí\nservicio,plantillas,Productos digitales,Productos digitales,Plantillas y herramientas listas para organizar su negocio desde hoy.,\"Plantillas de finanzas, inventario y organización pensadas para micronegocios. Las recibe, las abre y empieza a usarlas el mismo día.\",Plantillas de finanzas e inventario | Listas para usar | Fáciles de personalizar,no,sí\nservicio,cv,Documentos,Currículum profesional (CV),Un currículum moderno y bien presentado que destaque su experiencia y le ayude a conseguir empleo.,\"Redactamos y diseñamos su currículum a partir de su información: experiencia, estudios y habilidades. Lo recibe en PDF, listo para enviar a las empresas.\",Redacción y diseño profesional | Entrega en PDF | Revisión de ortografía y presentación,no,sí\npaquete,vitrina,Paquete 01,Vitrina,Para empezar a vender en línea.,,Catálogo web o menú digital | Enlace para WhatsApp y biografía de Instagram | Pedidos directos a su WhatsApp | Capacitación para actualizarlo,no,sí\npaquete,orden,Paquete 02,Negocio en orden,Para vender en línea y llevar sus números al día.,,Todo lo del paquete Vitrina | Hoja de finanzas con gráficos | Control de inventario | Calendario de fechas de mayor venta,sí,sí\npaquete,digital,Paquete 03,Negocio digital,Para que su negocio trabaje casi solo.,,Todo lo del paquete Negocio en orden | Automatización de pedidos y mensajes | Reportes automáticos | Plantillas digitales adicionales,no,sí\n";
+
+/* ===================== UTILIDADES ===================== */
+const $ = s => document.querySelector(s);
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const waLink = msg => "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const yes = v => /^(s[ií]|si|yes|true|1|x)$/i.test(String(v).trim());
+const check = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+const plus = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>';
+const xIc = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+
+function parseCSV(text) {
+  const rows = []; let row = [], cell = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else q = false; } else cell += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(cell); cell = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && text[i + 1] === "\n") i++; row.push(cell); rows.push(row); row = []; cell = ""; }
+    else cell += c;
+  }
+  if (cell || row.length) { row.push(cell); rows.push(row); }
+  const head = rows.shift().map(h => h.trim().toLowerCase());
+  return rows.filter(r => r.some(x => x.trim())).map(r => Object.fromEntries(head.map((h, i) => [h, (r[i] || "").trim()])));
+}
+
+/* ===================== ENLACES GENERALES ===================== */
+/* ===================== IDIOMAS (ES / EN) ===================== */
+let LANG = "es";
+try { LANG = localStorage.getItem("lt_lang") || ((navigator.language || "").toLowerCase().startsWith("en") ? "en" : "es"); } catch { }
+
+/* Textos fijos de la página: español → inglés */
+const STATIC_EN = {
+  "¡Hola! Soy Lógico, el búho de LogicalTech.":"Hi! I'm Lógico, the LogicalTech owl.",
+  "Pida su demo gratis":"Get your free demo",
+  "Demo gratis":"Free demo",
+  "Vea su catálogo":"See your catalog",
+  "antes de pagar":"before you pay",
+  "Le armamos una muestra con el nombre de su negocio, sin compromiso. Si le gusta, la dejamos lista en 2 a 3 días.":"We build a sample with your business name, no strings attached. If you like it, we have it ready in 2 to 3 days.",
+  "Díganos el nombre y el tipo de su negocio.":"Tell us your business name and type.",
+  "Le enviamos su demo por WhatsApp.":"We send your demo on WhatsApp.",
+  "Usted decide si la quiere.":"You decide if you want it.",
+  "Nombre de su negocio":"Your business name",
+  "Tipo de negocio":"Business type",
+  "Comida (soda, restaurante)":"Food (diner, restaurant)",
+  "Tienda (ropa, belleza, otros)":"Store (clothing, beauty, other)",
+  "Servicios con cita (salón, barbería, consultorio)":"Appointment services (salon, barbershop, clinic)",
+  "Floristería":"Flower shop",
+  "Taller":"Workshop",
+  "Turismo":"Tourism",
+  "Otro":"Other",
+  "Pedir mi demo por WhatsApp":"Request my demo on WhatsApp",
+  "Sin costo y sin compromiso.":"Free and no strings attached.",
+  "¡Gracias!":"Thank you!",
+  "Le respondemos pronto por WhatsApp.":"We'll reply soon on WhatsApp.",
+  "Trabajamos con":"We work with",
+  "Toque un servicio para ver todo lo que incluye, y agregue a su cotización los que le interesen.":"Tap a service to see everything it includes, and add the ones you like to your quote.",
+  "Compare y":"Compare and",
+  "elija":"choose",
+  "Combinaciones pensadas para cada etapa de su negocio. Precio a cotizar.":"Bundles designed for every stage of your business. Price on request.",
+  "Desde que recibimos la información de su negocio":"From when we receive your business information",
+  "SINPE Móvil o efectivo":"SINPE Móvil or cash",
+  "Formas de pago":"Payment methods",
+  "Capacitación incluida":"Training included",
+  "Horario:":"Hours:",
+  "todos los días, 6:00 a.m. – 8:00 p.m.":"every day, 6:00 a.m. – 8:00 p.m.",
+  "Cobertura:":"Service area:",
+  "toda la zona de San Carlos y Alajuela":"all of San Carlos and Alajuela",
+  "Servicios":"Services","Paquetes":"Packages","Portafolio":"Portfolio","Nosotros":"About","Preguntas":"FAQ","Cotizar":"Get a quote",
+  "San Carlos y Alajuela · Costa Rica":"San Carlos & Alajuela · Costa Rica",
+  "Tecnología al servicio de":"Technology at the service of","su negocio.":"your business.",
+  "Catálogos web, control de finanzas e inventario y automatización para micronegocios. Soluciones sencillas, hechas a la medida de cada cliente.":"Web catalogs, finance and inventory tracking, and automation for small businesses. Simple solutions, tailored to each client.",
+  "Solicitar cotización":"Request a quote","Ver servicios":"See services",
+  "A la medida":"Tailor-made","Cada solución se adapta a su negocio":"Every solution adapts to your business",
+  "Sin complicaciones":"No hassle","Le enseñamos a usarlo y actualizarlo":"We teach you how to use and update it",
+  "Listo en 2 a 3 días":"Ready in 2 to 3 days","Tiempo de entrega de cada proyecto":"Delivery time for each project",
+  "Nuestros servicios":"Our services","Lo que hacemos":"What we do","por usted":"for you",
+  "Seleccione los servicios de su interés y envíenos su solicitud de cotización por WhatsApp.":"Select the services you're interested in and send us your quote request on WhatsApp.",
+  "Soluciones":"Complete","completas":"solutions",
+  "Combinaciones pensadas para cada etapa de su negocio. Todos incluyen capacitación y entrega en 2 a 3 días.":"Bundles designed for every stage of your business. All include training and delivery in 2 to 3 days.",
+  "Para quién trabajamos":"Who we work with","Negocios de la zona":"Local businesses",
+  "Floristerías":"Flower shops","Sodas y restaurantes":"Diners & restaurants","Talleres":"Workshops","Tiendas de belleza":"Beauty stores","Pulperías y ventanitas":"Corner stores",
+  "Trabajos":"Our","realizados":"work","Primer cliente":"First client",
+  "Catálogo web con enlace para compartir por WhatsApp y en la biografía de Instagram. Los productos y precios se actualizan desde Google Sheets, y en la misma hoja se llevan las finanzas del negocio: entradas, salidas, pérdidas y gráficos, junto con un calendario de las fechas de mayor venta.":"A web catalog with a link to share on WhatsApp and in the Instagram bio. Products and prices are updated from Google Sheets, and the same sheet tracks the business's finances: income, expenses, losses and charts, plus a calendar of peak sales dates.",
+  "Catálogo web":"Web catalog","Pedidos por WhatsApp":"WhatsApp orders","Finanzas":"Finances","Pedir por WhatsApp":"Order on WhatsApp",
+  "Cómo trabajamos":"How we work","Un proceso":"A clear","claro":"process",
+  "Conversamos":"We talk","Usted nos cuenta sobre su negocio y lo que desea mejorar.":"You tell us about your business and what you'd like to improve.",
+  "Le presentamos una propuesta":"We present a proposal","Le mostramos cómo se vería y la ajustamos a su gusto.":"We show you how it would look and adjust it to your liking.",
+  "Lo dejamos funcionando":"We get it running","Lo publicamos y le enseñamos a usarlo y actualizarlo.":"We publish it and teach you how to use and update it.",
+  "Sobre nosotros":"About us","Un emprendimiento":"A local","de aquí":"business",
+  "LogicalTech es un emprendimiento de tecnología en Ciudad Quesada dedicado a los micronegocios. Creemos que la tecnología no tiene por qué ser complicada ni costosa para ser útil.":"LogicalTech is a technology business in Ciudad Quesada dedicated to small businesses. We believe technology doesn't have to be complicated or expensive to be useful.",
+  "Por eso creamos herramientas sencillas que ayudan a vender más, ordenar las finanzas y ahorrar tiempo, y acompañamos a cada cliente hasta que pueda usarlas por su cuenta.":"That's why we build simple tools that help you sell more, organize your finances and save time, and we support each client until they can use them on their own.",
+  "— Elian, fundador de LogicalTech":"— Elian, founder of LogicalTech",
+  "Preguntas frecuentes":"Frequently asked questions","Resolvemos":"We answer","sus dudas":"your questions",
+  "¿Necesito saber de tecnología?":"Do I need to know about technology?",
+  "No. Le entregamos todo listo para usar y le enseñamos paso a paso cómo manejarlo y actualizarlo.":"No. We deliver everything ready to use and teach you step by step how to manage and update it.",
+  "¿Puedo cambiar mis productos y precios yo mismo?":"Can I change my products and prices myself?",
+  "Sí. Los catálogos y menús se actualizan desde una hoja de Google Sheets: usted cambia un precio y se refleja en su catálogo.":"Yes. Catalogs and menus are updated from a Google Sheets spreadsheet: you change a price and it shows up in your catalog.",
+  "¿Cómo me llegan los pedidos?":"How do I receive orders?","Directamente a su WhatsApp, con el detalle de lo que el cliente eligió.":"Straight to your WhatsApp, with the details of what the customer chose.",
+  "¿Cuánto tarda en estar listo?":"How long does it take?","Entre 2 y 3 días a partir de que nos envía la información de su negocio (productos, precios y fotografías).":"2 to 3 days from when you send us your business information (products, prices and photos).",
+  "¿Cómo solicito una cotización?":"How do I request a quote?",
+  "Seleccione los servicios de su interés en esta página y envíe la solicitud por WhatsApp, o escríbanos al 6326-6186. Le respondemos con una propuesta y su precio.":"Select the services you're interested in on this page and send the request on WhatsApp, or message us at 6326-6186. We'll reply with a proposal and its price.",
+  "Contacto":"Contact","¿Listo para dar el siguiente paso con su negocio?":"Ready to take your business to the next step?",
+  "Escríbanos y con gusto le asesoramos sobre la mejor solución para su negocio.":"Write to us and we'll gladly advise you on the best solution for your business.",
+  "Correo":"Email","Cobertura":"Service area","Toda la zona de San Carlos y Alajuela":"All of San Carlos and Alajuela",
+  "Horario":"Hours","Todos los días":"Every day","Entrega":"Delivery","2 a 3 días":"2 to 3 days",
+  "Escríbanos por WhatsApp":"Message us on WhatsApp","© LogicalTech · Ciudad Quesada, Costa Rica":"© LogicalTech · Ciudad Quesada, Costa Rica",
+  "Tecnología al servicio de su negocio":"Technology at the service of your business",
+  "Enviar":"Send","Entrega en 2 a 3 días":"Delivery in 2 to 3 days","Precio a cotizar":"Price on request","Pago por SINPE Móvil o efectivo":"Pay by SINPE Móvil or cash",
+  "Consultar por WhatsApp":"Ask on WhatsApp","Solicitud de cotización":"Quote request",
+  "Le responderemos por WhatsApp con una propuesta y su precio.":"We'll reply on WhatsApp with a proposal and its price.",
+  "Su nombre":"Your name","Nombre y tipo de negocio":"Business name and type","Comentarios (opcional)":"Comments (optional)",
+  "Forma de pago":"Payment method","Efectivo":"Cash","Copiar número":"Copy number",
+  "Envíe el comprobante por WhatsApp una vez acordada la cotización.":"Send the receipt on WhatsApp once the quote is agreed.",
+  "Enviar por WhatsApp":"Send on WhatsApp","O escríbanos directamente al 6326-6186":"Or message us directly at 6326-6186"
+};
+
+/* Textos que cambian (tarjetas, cotización, mensajes) */
+const UI = {
+  es: {seal:"Servicio<br>destacado", num:"N.º", more:"Ver detalles", add:"Agregar a cotización", added:"Agregado", remove:"Quitar de la cotización",
+       all:"Todos", rec:"Recomendado", price:"Precio a cotizar", reqPack:"Solicitar este paquete", pack:"Paquete", extra:["Pedidos por WhatsApp","Pago por SINPE Móvil"],
+       open:"Atendiendo ahora · hasta las 8:00 p.m.", closed:"Fuera de horario · atendemos de 6:00 a.m. a 8:00 p.m.",
+       one:"servicio seleccionado", many:"servicios seleccionados", empty:"Aún no ha seleccionado servicios. Igualmente puede escribirnos.",
+       copied:"¡Copiado!", msgDemo:(b,t)=>"Buenas, quiero mi demo gratis de LogicalTech."+(b?"\nNegocio: "+b:"")+"\nTipo: "+t, inc:"Incluido", notInc:"No incluido", includes:"Incluye", idealFor:"Ideal para", quoteShort:"Cotizar", copyBtn:"Copiar número", number:"Número: ", quitar:"Quitar ",
+       phName:"Ej. María Rodríguez", phBiz:"Ej. Soda La Esquina",
+       msgGeneric:"Buenas, me gustaría recibir información sobre los servicios de LogicalTech.",
+       msgPack:p => "Buenas, me interesa el paquete " + p + " de LogicalTech. ¿Me podría enviar la cotización?",
+       msgAsk:s => "Buenas, me gustaría más información sobre el servicio " + s + " de LogicalTech.",
+       hi:"Buenas", myName:", mi nombre es ", quote:". Me gustaría solicitar una cotización a LogicalTech", for:" para:", biz:"Negocio: ", payL:"Forma de pago: ", notes:"Comentarios: ",
+       pay:{"SINPE Móvil":"SINPE Móvil","Efectivo":"Efectivo"}},
+  en: {seal:"Featured<br>service", num:"No.", more:"See details", add:"Add to quote", added:"Added", remove:"Remove from quote",
+       all:"All", rec:"Recommended", price:"Price on request", reqPack:"Request this package", pack:"Package", extra:["WhatsApp orders","SINPE Móvil payments"],
+       open:"Open now · until 8:00 p.m.", closed:"Closed · open 6:00 a.m. to 8:00 p.m.",
+       one:"service selected", many:"services selected", empty:"You haven't selected any services yet. You can still message us.",
+       copied:"Copied!", msgDemo:(b,t)=>"Hello, I'd like my free LogicalTech demo."+(b?"\nBusiness: "+b:"")+"\nType: "+t, inc:"Included", notInc:"Not included", includes:"Includes", idealFor:"Ideal for", quoteShort:"Get quote", copyBtn:"Copy number", number:"Number: ", quitar:"Remove ",
+       phName:"e.g. María Rodríguez", phBiz:"e.g. Soda La Esquina",
+       msgGeneric:"Hello, I'd like information about LogicalTech's services.",
+       msgPack:p => "Hello, I'm interested in LogicalTech's " + p + " package. Could you send me a quote?",
+       msgAsk:s => "Hello, I'd like more information about LogicalTech's " + s + " service.",
+       hi:"Hello", myName:", my name is ", quote:". I'd like to request a quote from LogicalTech", for:" for:", biz:"Business: ", payL:"Payment method: ", notes:"Comments: ",
+       pay:{"SINPE Móvil":"SINPE Móvil","Efectivo":"Cash"}}
+};
+const t = k => (UI[LANG] || UI.es)[k];
+
+/* Traducción de los servicios y paquetes (por id de la hoja). Si falta, se muestra en español. */
+const CATS_EN = {"Ventas en línea":"Online sales","Control del negocio":"Business management","Automatización":"Automation","Productos digitales":"Digital products","Documentos":"Documents","Otros":"Other"};
+const DATA_EN = {
+  catalogo:{name:"Web catalog", desc:"Your products in one link to share on WhatsApp and in your Instagram bio. Customers choose and order directly from you.",
+    detail:"A web page with all your products, photos and prices, ready to share with a single link. Customers choose, build their order and send you the full details on WhatsApp. You update products and prices from a Google Sheets spreadsheet, no code needed.",
+    inc:["Your own link to share","Orders straight to your WhatsApp","Products and prices editable from Google Sheets","SINPE Móvil payment option","Training to keep it updated"]},
+  menu:{name:"Digital menu", desc:"For restaurants and diners: your menu always up to date, with photos and WhatsApp orders.",
+    detail:"Ideal for diners, restaurants and fast food. Your dishes organized by category, with photos and prices always up to date. Customers build their order on their phone and send it to you on WhatsApp.",
+    inc:["Dishes organized by category, with photos","WhatsApp orders","Change prices in seconds from Google Sheets"]},
+  finanzas:{name:"Business finances", desc:"A spreadsheet to record income, expenses and losses, with charts that show how your business is doing.",
+    detail:"A Google Sheets spreadsheet built for your business, where you record income, expenses and losses. Charts update automatically so you can see how the month is going at a glance, and a calendar reminds you of your peak sales dates.",
+    inc:["Sales and expense tracking","Automatic charts","Peak sales calendar","Training included"]},
+  stock:{name:"Inventory control", desc:"Know what you have, what sells most and what to restock before it runs out.",
+    detail:"Track every product: how much you have, how much you sell and when to restock. The sheet alerts you when a product is running low.",
+    inc:["Inventory by product","Low-stock alerts","Best-selling products"]},
+  auto:{name:"Automation", desc:"Fewer repetitive tasks: orders, reports and messages that happen on their own.",
+    detail:"We connect your tools so repetitive tasks take care of themselves: orders arrive organized, reports are generated automatically and messages are ready to send.",
+    inc:["Orders that arrive organized","Automatic reports","Ready-to-send messages"]},
+  plantillas:{name:"Digital products", desc:"Templates and tools ready to organize your business starting today.",
+    detail:"Finance, inventory and organization templates designed for small businesses. You receive them, open them and start using them the same day.",
+    inc:["Finance and inventory templates","Ready to use","Easy to customize"]},
+  cv:{name:"Professional résumé (CV)", desc:"A modern, well-presented résumé that highlights your experience and helps you land a job.",
+    detail:"We write and design your résumé from your information: experience, education and skills. You receive it as a PDF, ready to send to employers.",
+    inc:["Professional writing and design","PDF delivery","Spelling and presentation review"]},
+  vitrina:{name:"Showcase", desc:"To start selling online.",
+    inc:["Web catalog or digital menu","Link for WhatsApp and your Instagram bio","Orders straight to your WhatsApp","Training to keep it updated"]},
+  orden:{name:"Business in order", desc:"To sell online and keep your numbers up to date.",
+    inc:["Everything in the Showcase package","Finance spreadsheet with charts","Inventory control","Peak sales calendar"]},
+  digital:{name:"Digital business", desc:"So your business practically runs itself.",
+    inc:["Everything in the Business in order package","Order and message automation","Automatic reports","Additional digital templates"]}
+};
+const tr = (id, field, es) => (LANG === "en" && DATA_EN[id] && DATA_EN[id][field]) || es;
+const trCat = c => LANG === "en" ? (CATS_EN[c] || c) : c;
+const trTier = s => LANG === "en" ? s.replace(/^Paquete/i, "Package") : s;
+
+/* Recorre los textos fijos y los cambia de idioma */
+const DYNAMIC = "#owlHero,#owlToast,#cmp,#cards,#packs,#tabs,#track,#detail h2,#dCat,#dBody,#dInc,#qlist,#statusTxt,#qlabel,#dAdd,#copySinpe,#langSwitch,script,style";
+function applyStatic() {
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode: n => n.parentElement.closest(DYNAMIC) || !n.nodeValue.trim() ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+  });
+  let n;
+  while ((n = walker.nextNode())) {
+    if (n._es === undefined) n._es = n.nodeValue;
+    const key = n._es.replace(/\s+/g, " ").trim();
+    const val = LANG === "en" ? STATIC_EN[key] : null;
+    n.nodeValue = val ? n._es.replace(n._es.trim(), val) : n._es;
+  }
+  $("#fName").placeholder = t("phName");
+  $("#fBiz").placeholder = t("phBiz");
+  $("#dBizName").placeholder = t("phBiz");
+  document.documentElement.lang = LANG;
+  document.title = LANG === "en" ? "LogicalTech — Digital services for your business" : "LogicalTech — Servicios digitales para su negocio";
+  document.querySelectorAll("#langSwitch button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === LANG));
+}
+function setLang(l) {
+  LANG = l;
+  try { localStorage.setItem("lt_lang", l); } catch { }
+  applyStatic(); setLinks(); updateStatus(); render(); buildDemo();
+}
+
+function setLinks() {
+  const generic = waLink(t("msgGeneric"));
+  ["#navWa","#heroWa","#footWa","#ciWa","#waFloat"].forEach(s => { const el = $(s); if (el) el.href = generic; });
+}
+setLinks();
+
+/* ===== Búho Lógico (pixel art) ===== */
+const OWL_C={d:"#4A3826",b:"#8A6A4E",l:"#E9D9BE",s:"#CDBFA8",w:"#F8F4EC",p:"#1B1511",g:"#2B221B",a:"#E3A33B",m:"#7A2E1E",f:"#E3A33B"};
+const OWL_G=["..d..........d..","..dd........dd..","..dbbbbbbbbbbd..",".dbbbbbbbbbbbbd.",".dbggggbbggggbd.",".dgwwwwggwwwwgd.",".dgwppwggwppwgd.",".dgwppwbbwppwgd.",".dgwwwwggwwwwgd.",".dbggggaaggggbd.",".dbbbbbaabbbbbd.",".dbllllllllllbd.",".dblsllllllslbd.",".dbllllsllllbbd.",".dbllllllllllbd.","..dbllllllllbd..","...dbbbbbbbbd...","....ff....ff...."];
+function drawOwl(el,open){
+  if(!el) return;
+  const g=OWL_G.map(r=>r.split(""));
+  if(open){g[10][6]="a";g[10][7]="m";g[10][8]="m";g[10][9]="a";g[11][7]="a";g[11][8]="a";}
+  let h="";g.forEach((r,y)=>r.forEach((ch,x)=>{if(OWL_C[ch])h+=`<rect x="${x}" y="${y}" width="1.02" height="1.02" fill="${OWL_C[ch]}"/>`}));
+  h+='<g class="lid">';[5,6,7,8].forEach(y=>[3,4,5,6,9,10,11,12].forEach(x=>{h+=`<rect x="${x}" y="${y}" width="1.02" height="1.02" fill="${y==7?"#2B221B":"#8A6A4E"}"/>`}));h+="</g>";
+  el.innerHTML=h;
+}
+drawOwl($("#owlHero"),false); drawOwl($("#owlToast"),true);
+let toastTimer;
+function celebrate(){
+  const tt=$("#toast"); if(!tt) return;
+  tt.classList.add("show"); clearTimeout(toastTimer); toastTimer=setTimeout(()=>tt.classList.remove("show"),4200);
+}
+
+/* ===== Demo gratis ===== */
+function buildDemo(){
+  const b=$("#dBizName").value.trim(), sel=$("#dBizType");
+  $("#demoWa").href=waLink(t("msgDemo")(b, sel.selectedOptions[0].text));
+}
+$("#demoForm").addEventListener("input",buildDemo);
+$("#demoForm").addEventListener("change",buildDemo);
+$("#demoForm").addEventListener("submit",e=>{e.preventDefault();buildDemo();$("#demoWa").click();});
+$("#demoWa").addEventListener("click",()=>{buildDemo();setTimeout(celebrate,300);});
+$("#sendWa").addEventListener("click",()=>setTimeout(celebrate,300));
+document.querySelector("#langSwitch").addEventListener("click", e => { const b = e.target.closest("button[data-lang]"); if (b && b.dataset.lang !== LANG) setLang(b.dataset.lang); });
+{ const u = IG_USER.replace(/^@/,""); $("#igLink").href = "https://instagram.com/" + u; $("#igText").textContent = "@" + u; }
+$("#sinpeNum").textContent = SINPE;
+
+/* ===================== HORARIO ===================== */
+function updateStatus() {
+  const h = +new Intl.DateTimeFormat("en-US", {timeZone: HOURS.tz, hour: "numeric", hourCycle: "h23"}).format(new Date());
+  const open = h >= HOURS.open && h < HOURS.close;
+  $("#status").classList.toggle("open", open);
+  $("#statusTxt").textContent = open ? t("open") : t("closed");
+}
+updateStatus(); setInterval(updateStatus, 60000);
+
+/* ===================== ESTADO ===================== */
+let SERVICES = [], PACKS = [];
+const picked = new Set();
+const cards = $("#cards"), tBox = $("#tabs"), ul = $("#underline");
+const byId = id => SERVICES.find(s => s.id === id);
+
+function load(rows) {
+  const items = rows.filter(r => r.nombre && !/^no$/i.test(r.disponible || "sí"));
+  SERVICES = items.filter(r => (r.tipo || "servicio").toLowerCase() === "servicio").map(r => ({
+    id: r.id || r.nombre.toLowerCase().replace(/\W+/g, "-"), cat: r.categoria || "Otros", name: r.nombre,
+    desc: r.descripcion, detail: r.detalle || r.descripcion, inc: (r.incluye || "").split("|").map(x => x.trim()).filter(Boolean), feat: yes(r.destacado)
+  }));
+  PACKS = items.filter(r => (r.tipo || "").toLowerCase() === "paquete").map(r => ({
+    id: r.id, name: r.nombre, tier: r.categoria, for: r.descripcion, inc: (r.incluye || "").split("|").map(x => x.trim()).filter(Boolean), rec: yes(r.destacado)
+  }));
+  render();
+}
+
+/* ===================== RENDER ===================== */
+function render() {
+  cards.innerHTML = SERVICES.map((s, i) => `
+    <article class="card${s.feat ? " feat" : ""}" data-cat="${esc(s.cat)}" data-id="${esc(s.id)}">
+      ${s.feat ? '<span class="seal" aria-hidden="true">' + t("seal") + '</span>' : ""}
+      <span class="num">${t("num")} ${String(i + 1).padStart(2, "0")}</span>
+      <h3>${esc(tr(s.id, "name", s.name))}</h3>
+      <p>${esc(tr(s.id, "desc", s.desc))}</p>
+      <div class="card-foot">
+        <button class="more" type="button" data-more="${esc(s.id)}">${t("more")} (${tr(s.id, "inc", s.inc).length})</button>
+        <button class="btn add" type="button" aria-pressed="false" data-id="${esc(s.id)}">
+          <span class="lbl">${t("add")}</span><span class="ic">${plus}</span>
+        </button>
+      </div>
+    </article>`).join("");
+
+  const prevCat = (curTab() || {dataset: {cat: "*"}}).dataset.cat;
+  const cats = ["*", ...new Set(SERVICES.map(s => s.cat))];
+  tBox.querySelectorAll(".tab").forEach(x => x.remove());
+  cats.forEach(c => {
+    const b = document.createElement("button");
+    b.className = "tab"; b.type = "button"; b.textContent = c === "*" ? t("all") : trCat(c); b.dataset.cat = c;
+    b.setAttribute("aria-pressed", c === prevCat ? "true" : "false");
+    tBox.appendChild(b);
+  });
+  if (!curTab()) tBox.querySelector(".tab").setAttribute("aria-pressed", "true");
+  cards.querySelectorAll(".card").forEach(c => c.hidden = !(curTab().dataset.cat === "*" || c.dataset.cat === curTab().dataset.cat));
+  requestAnimationFrame(() => moveLine(curTab()));
+
+  renderCompare();
+
+  stagger(); refresh(); qbar.classList.toggle("show", picked.size > 0);
+}
+
+/* Tabla comparativa: "Todo lo del paquete X" suma lo del paquete anterior */
+function renderCompare() {
+  const isAll = x => /^(todo lo del|everything in)/i.test(x);
+  const rows = [], sets = [];
+  PACKS.forEach((p, i) => {
+    const inc = tr(p.id, "inc", p.inc), own = inc.filter(x => !isAll(x));
+    own.forEach(x => { if (!rows.includes(x)) rows.push(x); });
+    sets.push(new Set([...own, ...(inc.some(isAll) && i ? sets[i - 1] : [])]));
+  });
+  const yesIc = '<svg class="yes" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="' + t("inc") + '"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  const noIc = '<span class="no" role="img" aria-label="' + t("notInc") + '">—</span>';
+  const rc = p => p.rec ? ' class="rec"' : "";
+  $("#cmp").innerHTML =
+    `<thead><tr><th scope="col"><span class="sr">${t("includes")}</span></th>${PACKS.map(p => `<th scope="col"${rc(p)}>${p.rec ? '<span class="badge">' + t("rec") + '</span>' : ""}<span class="tier">${esc(trTier(p.tier))}</span><span class="pn">${esc(tr(p.id, "name", p.name))}</span></th>`).join("")}</tr></thead>
+     <tbody>${rows.map(r => `<tr><th scope="row">${esc(r)}</th>${sets.map((s, i) => `<td${rc(PACKS[i])}>${s.has(r) ? yesIc : noIc}</td>`).join("")}</tr>`).join("")}
+     <tr class="ideal"><th scope="row">${t("idealFor")}</th>${PACKS.map(p => `<td${rc(p)}>${esc(tr(p.id, "desc", p.for))}</td>`).join("")}</tr>
+     <tr class="act"><th scope="row">${t("price")}</th>${PACKS.map(p => `<td${rc(p)}><a class="btn btn-sm ${p.rec ? "btn-dark" : "btn-line"}" href="${waLink(t("msgPack")(tr(p.id, "name", p.name)))}" target="_blank" rel="noopener" aria-label="${t("reqPack")}: ${esc(tr(p.id, "name", p.name))}">${t("quoteShort")}</a></td>`).join("")}</tr></tbody>`;
+}
+
+function stagger() {
+  let n = 0;
+  cards.querySelectorAll(".card:not([hidden])").forEach(c => {
+    c.style.animation = "none"; void c.offsetWidth;
+    c.style.animation = ""; c.style.animationDelay = Math.min(n++, 8) * 55 + "ms";
+  });
+}
+function moveLine(btn) { if (!btn) return; ul.style.width = btn.offsetWidth + "px"; ul.style.transform = "translateX(" + btn.offsetLeft + "px)"; }
+const curTab = () => tBox.querySelector(".tab[aria-pressed='true']");
+tBox.addEventListener("click", e => {
+  const b = e.target.closest(".tab"); if (!b) return;
+  tBox.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+  moveLine(b);
+  cards.querySelectorAll(".card").forEach(c => c.hidden = !(b.dataset.cat === "*" || c.dataset.cat === b.dataset.cat));
+  stagger();
+});
+addEventListener("resize", () => moveLine(curTab()));
+document.fonts && document.fonts.ready.then(() => moveLine(curTab()));
+
+/* ===================== COTIZACIÓN ===================== */
+const qbar = $("#qbar"), countEl = $("#count");
+const payVal = () => (document.querySelector("input[name=pay]:checked") || {}).value || "";
+function buildMsg() {
+  const name = $("#fName").value.trim(), biz = $("#fBiz").value.trim(), note = $("#fNote").value.trim();
+  let msg = t("hi") + (name ? t("myName") + name : "") + t("quote");
+  msg += picked.size ? t("for") + "\n" + [...picked].map(id => "• " + tr(id, "name", (byId(id) || {name: id}).name)).join("\n") : ".";
+  if (biz) msg += "\n\n" + t("biz") + biz;
+  if (payVal()) msg += "\n" + t("payL") + (t("pay")[payVal()] || payVal());
+  if (note) msg += "\n" + t("notes") + note;
+  $("#sendWa").href = waLink(msg);
+}
+function refresh() {
+  const n = picked.size;
+  countEl.textContent = n;
+  $("#qlabel").textContent = n === 1 ? t("one") : t("many");
+  qbar.classList.toggle("show", n > 0);
+  document.body.classList.toggle("has-q", n > 0);
+  countEl.classList.remove("bump"); void countEl.offsetWidth; countEl.classList.add("bump");
+  $("#qlist").innerHTML = [...picked].map(id => {
+    const s = byId(id); if (!s) return "";
+    const nm = esc(tr(id, "name", s.name));
+    return `<li><span>${nm}</span><button type="button" data-rm="${esc(id)}" aria-label="${t("quitar")}${nm}">${xIc}</button></li>`;
+  }).join("") || '<li style="font-weight:400;font-family:Lora,serif;font-size:16px;color:#6B5A4B">' + t("empty") + '</li>';
+  cards.querySelectorAll(".add").forEach(b => {
+    const on = picked.has(b.dataset.id);
+    b.classList.toggle("on", on); b.setAttribute("aria-pressed", on);
+    b.querySelector(".lbl").textContent = on ? t("added") : t("add");
+  });
+  $("#dAdd").textContent = openDetailId && picked.has(openDetailId) ? t("remove") : t("add");
+  $("#copySinpe").textContent = t("copyBtn");
+  buildMsg();
+}
+function fly(from) {
+  if (reduce || !qbar.classList.contains("show")) return;
+  const a = from.getBoundingClientRect(), t = $("#bagIc").getBoundingClientRect();
+  const d = document.createElement("span"); d.className = "flyer"; document.body.appendChild(d);
+  const x0 = a.left + a.width / 2 - 8, y0 = a.top + a.height / 2 - 8, x1 = t.left + 3, y1 = t.top + 3;
+  const mx = (x0 + x1) / 2, my = Math.min(y0, y1) - 120;
+  const anim = d.animate([
+    {transform:`translate(${x0}px,${y0}px) scale(1)`},
+    {transform:`translate(${mx}px,${my}px) scale(1.1)`, offset:.5},
+    {transform:`translate(${x1}px,${y1}px) scale(.5)`, opacity:.6}
+  ], {duration:650, easing:"cubic-bezier(.23,1,.32,1)"});
+  anim.onfinish = () => { d.remove(); const ic = $("#bagIc"); ic.classList.remove("shake"); void ic.getBoundingClientRect(); ic.classList.add("shake"); };
+}
+function toggle(id, fromEl) {
+  const adding = !picked.has(id), wasShown = qbar.classList.contains("show");
+  adding ? picked.add(id) : picked.delete(id);
+  refresh();
+  if (adding && fromEl) setTimeout(() => fly(fromEl), wasShown ? 0 : 300);
+}
+
+/* Tocar una tarjeta abre los detalles; el botón agrega */
+cards.addEventListener("click", e => {
+  const add = e.target.closest(".add");
+  if (add) { toggle(add.dataset.id, add); return; }
+  const card = e.target.closest(".card");
+  if (card) openDetail(card.dataset.id);
+});
+
+/* ===================== HOJAS (cajones) ===================== */
+const drawer = $("#drawer"), detail = $("#detail"), scrim = $("#scrim");
+let openDetailId = null;
+function openDetail(id) {
+  const s = byId(id); if (!s) return;
+  openDetailId = id;
+  $("#dCat").textContent = trCat(s.cat);
+  $("#dName").textContent = tr(id, "name", s.name);
+  $("#dBody").textContent = tr(id, "detail", s.detail);
+  $("#dInc").innerHTML = tr(id, "inc", s.inc).map(x => "<li>" + check + "<span>" + esc(x) + "</span></li>").join("");
+  $("#dAsk").href = waLink(t("msgAsk")(tr(id, "name", s.name)));
+  refresh();
+  detail.scrollTop = 0;
+  detail.classList.add("show"); scrim.classList.add("show");
+  setTimeout(() => $("#dClose").focus({preventScroll:true}), 300);
+}
+function openQ() { closeAll(); refresh(); drawer.classList.add("show"); scrim.classList.add("show"); setTimeout(() => $("#fName").focus({preventScroll:true}), 350); }
+function closeAll() { drawer.classList.remove("show"); detail.classList.remove("show"); scrim.classList.remove("show"); openDetailId = null; }
+$("#dClose").addEventListener("click", closeAll);
+$("#dAdd").addEventListener("click", () => { const id = openDetailId, had = picked.has(id); toggle(id, null); if (!had) setTimeout(closeAll, 250); });
+$("#openQ").addEventListener("click", openQ);
+$("#openQ2").addEventListener("click", openQ);
+scrim.addEventListener("click", closeAll);
+addEventListener("keydown", e => { if (e.key === "Escape") closeAll(); });
+$("#qlist").addEventListener("click", e => {
+  const b = e.target.closest("[data-rm]"); if (!b) return;
+  picked.delete(b.dataset.rm); refresh(); if (!picked.size) closeAll();
+});
+
+/* Pago */
+$("#qform").addEventListener("change", e => {
+  if (e.target.name === "pay") $("#sinpeBox").hidden = e.target.value !== "SINPE Móvil";
+  buildMsg();
+});
+$("#copySinpe").addEventListener("click", async e => {
+  const b = e.currentTarget;
+  try { await navigator.clipboard.writeText(SINPE.replace(/\D/g, "")); b.textContent = t("copied"); }
+  catch { b.textContent = t("number") + SINPE; }
+  setTimeout(() => b.textContent = t("copyBtn"), 2000);
+});
+$("#qform").addEventListener("input", buildMsg);
+$("#qform").addEventListener("submit", e => { e.preventDefault(); buildMsg(); $("#sendWa").click(); });
+
+/* ===================== CARGA ===================== */
+/* Botón volver arriba */
+const totop = $("#totop");
+addEventListener("scroll", () => totop.classList.toggle("show", scrollY > 700), {passive: true});
+
+applyStatic();
+load(parseCSV(FALLBACK_CSV));
+buildDemo();
+if (SHEET_CSV_URL) {
+  fetch(SHEET_CSV_URL + (SHEET_CSV_URL.includes("?") ? "&" : "?") + "t=" + Date.now())
+    .then(r => r.ok ? r.text() : Promise.reject())
+    .then(t => load(parseCSV(t)))
+    .catch(() => {});
+}
+
+</script>
+</body>
+</html>
