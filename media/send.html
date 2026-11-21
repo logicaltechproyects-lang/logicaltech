@@ -1,0 +1,5 @@
+<!doctype html><meta charset="utf-8"><title>envío</title><body>Enviando imagen…
+<script>
+const f=new URLSearchParams(location.search).get('f')||'portada-facebook.png';
+fetch(f).then(r=>r.blob()).then(b=>{ if(window.opener){ window.opener.postMessage({lt:'img',name:f,blob:b},'https://www.facebook.com'); document.body.textContent='Listo'; setTimeout(()=>window.close(),800);} });
+</script>
